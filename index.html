@@ -1,23 +1,35 @@
 <!doctype html>
 <html lang="en-us">
+
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Juego</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <title>White Hole</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
+    <link rel="stylesheet" type="text/css" href="TemplateData/estilo.css">
+    <script src="TemplateData/carga.js" charset="utf-8"></script>
   </head>
-  <body class="template">
-    <p class="header"><span>Unity WebGL Player | </span>Juego</p>
+
+
+  <body>
+
     <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Juego</div>
+      <!-- Dimensiones recomendadas: 600px X 960px-->
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px" ></canvas>
     </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+
+    <div id="loadingBox">
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="gifJiratorio"><img id="spinner" src="TemplateData/loading.gif" style="margin: 0 auto" /></div>
+        <br><br>
+        <div id="bgBar"></div>
+        <div id="progressBar"></div>
+        <br><br>
+        <p id="loadingInfo">Loading...</p>
+    </div>
+
+
     <script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 268435456,
@@ -30,5 +42,10 @@
 </script>
 <script src="Release/UnityLoader.js"></script>
 
+
   </body>
+
+
+
+
 </html>
